@@ -4,7 +4,7 @@ const PROJECTS = [
     lang: "TypeScript",
     desc: "Interactive educational web app that teaches the SMITSIMAX (Decoupled UCT) algorithm for simultaneous-move games. Full-stack Next.js.",
     repo: "https://github.com/zikotissam/SMITSMAX",
-    live: "http://84.8.222.198:8080",
+    live: "https://smitsmax.84-8-222-198.sslip.io",
     liveLabel: "Live demo",
   },
   {
@@ -12,7 +12,7 @@ const PROJECTS = [
     lang: "TypeScript",
     desc: "A TypeScript task manager app with login, built on Next.js, libsql and NextAuth.",
     repo: "https://github.com/zikotissam/task-manager",
-    live: "http://84.8.222.198:8081",
+    live: "https://tasks.84-8-222-198.sslip.io",
     liveLabel: "Live demo",
   },
   {
