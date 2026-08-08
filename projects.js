@@ -55,9 +55,11 @@ const PROJECTS = [
 
 const grid = document.getElementById("project-grid");
 
-for (const p of PROJECTS) {
+for (let i = 0; i < PROJECTS.length; i++) {
+  const p = PROJECTS[i];
   const card = document.createElement("article");
-  card.className = "project-card";
+  card.className = "project-card reveal";
+  card.style.transitionDelay = `${Math.min(i * 70, 420)}ms`;
 
   const top = document.createElement("div");
   top.className = "p-top";
@@ -97,3 +99,17 @@ for (const p of PROJECTS) {
 
   grid.appendChild(card);
 }
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    }
+  },
+  { threshold: 0.1 }
+);
+
+document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
